@@ -19,6 +19,7 @@ header {
 .listStyle01 { height: 416px; overflow: auto; background-color: #fff; border: 1px solid rgba(0,0,0,.125); border-radius: 3px;  margin-bottom: 14px; }
 .listStyle01 .list-group-item { border-left: 0; border-right:0; }
 .listStyle01 .list-group .list-group-item:last-child { border-bottom: none; }
+.listStyle01 .list-group .list-group-item:first-child { border-top: none; }
 
 .paginationStyle01 .actionBtn { float: right; width: 120px;  }
 .paginationStyle01 .pagnInfo { float: left; width: 150px; padding: 10px 0 0 0; font-size: .9em; color: #666; }
