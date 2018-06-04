@@ -16,12 +16,14 @@ header {
 .container { margin:0; padding: 16px 0; background-color: #fbfbfb; }
 
 .list-group li { cursor: pointer; padding:8px 12px;  }
-.listStyle01 { height: 420px; overflow: auto; }
+.listStyle01 { height: 416px; overflow: auto; background-color: #fff; border: 1px solid rgba(0,0,0,.125); border-radius: 3px;  margin-bottom: 14px; }
+.listStyle01 .list-group-item { border-left: 0; border-right:0; }
+.listStyle01 .list-group .list-group-item:last-child { border-bottom: none; }
 
 .paginationStyle01 .actionBtn { float: right; width: 120px;  }
 .paginationStyle01 .pagnInfo { float: left; width: 150px; padding: 10px 0 0 0; font-size: .9em; color: #666; }
 .paginationStyle01 .pagination li a[disabled] { background-color: #efefef; cursor: auto;  }
-.profileDetails { background-color: #fff; height: 420px; width: 100%; overflow: auto; border: 1px solid rgba(0,0,0,.125); border-radius: 3px; padding: 10px 16px;  }
+.profileDetails { background-color: #fff; height: 416px; width: 100%; overflow: auto; border: 1px solid rgba(0,0,0,.125); border-radius: 3px; padding: 10px 16px;  }
 
 .profilePic { width: 256px; height: 256px; float:left; }
 .profPrimaryInfo { float: left; width: 50%; }

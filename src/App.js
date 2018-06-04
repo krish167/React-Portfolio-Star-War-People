@@ -15,12 +15,8 @@ class App  extends Component {
       currentPage: 1,
       nextPage: null,
       prevPage: null,
-      loading: false
+      loading: true
     };
-  }
-
-  getInitialState() {
-    return { loading: false };
   }
 
   componentWillMount() {
@@ -105,9 +101,14 @@ class App  extends Component {
             <div className="row">
               <div className="col-md-4">
                 <div className="listStyle01">
-                  <ul className="list-group">
-                    {this.renderProfList()}
-                  </ul>
+                  {this.state.loading.toString() === 'true' && (
+                    <div className="loadingStyle01">loading...</div>
+                  )} 
+                  {this.state.loading.toString() !== 'true' && (
+                    <ul className="list-group">
+                      {this.renderProfList()}
+                    </ul>
+                  )} 
                 </div>
                 <nav aria-label="Page navigation" className="paginationStyle01">
                   <div className="actionBtn">
@@ -131,10 +132,10 @@ class App  extends Component {
               </div>
               <div className="col-md-8">
                 <div>
-                     {!this.state.profileList.length === 0 && (
-                      <span>No data found</span>
-                     )}
                      <div className="profileDetails"> 
+                        {!this.state.profileList.length === 0 && (
+                          <span>No data found</span>
+                        )}
                         {this.state.loading.toString() === 'true' && (
                           <div className="loadingStyle01">loading...</div>
                         )} 
